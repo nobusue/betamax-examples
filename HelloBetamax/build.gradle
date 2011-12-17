@@ -1,0 +1,21 @@
+apply plugin:"groovy"
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	groovy "org.codehaus.groovy:groovy-all:1.8.4"
+	testCompile "com.github.robfletcher:betamax:1.0"
+	testCompile("org.codehaus.groovy.modules.http-builder:http-builder:0.5.1") {
+		exclude module:"groovy"
+		exclude module:"httpclient"
+	}
+	testCompile("org.spockframework:spock-core:0.5-groovy-1.8") {
+		exclude mogule:"groovy-all"
+	}
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.0-milestone-6'
+}
