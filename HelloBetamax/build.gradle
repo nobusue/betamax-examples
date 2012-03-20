@@ -12,7 +12,7 @@ dependencies {
 		exclude module:"httpclient"
 	}
 	testCompile("org.spockframework:spock-core:0.5-groovy-1.8") {
-		exclude mogule:"groovy-all"
+		exclude module:"groovy-all"
 	}
 }
 
